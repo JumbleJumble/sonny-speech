@@ -1,10 +1,10 @@
 import random
 
 words = [
-    "its", "ants", "bats", "cats", "dots", "hats", "nets", "lots", "nuts", "pets", 
+    "butts", "ants", "bats", "cats", "dots", "hats", "nets", "lots", "nuts", "pets",
     "boots", "boats", "goats", "notes", "roots", "sheets", "lights", "weights",
-    "back hurts", "foot hurts", "tummy hurts", "thumb hurts", "martial arts", "darts", 
-    "pants", "pints", "floats", "fruits", "plates", "paints", "carrots", "nuggets", "puppets", 
+    "back hurts", "foot hurts", "tummy hurts", "thumb hurts", "martial arts", "darts",
+    "pants", "squats", "floats", "fruits", "armpits", "Muppets", "carrots", "nuggets", "puppets",
     "rabbits"]
 
 players = ["Richard", "Sonny"]
@@ -21,7 +21,7 @@ while not game_over:
     second_word = random.choice(words)
     words.remove(second_word)
 
-    game_over = len(words) < 2
+    game_over = len(words) < len(players)
 
     print(f"First word: {first_word}\nSecond word: {second_word}")
 
