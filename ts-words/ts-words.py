@@ -1,8 +1,8 @@
 import random
 
 words = [
-    "its", "ants", "bats", "cats", "dots", "hats", "kits", "lots", "nuts", "pets", 
-    "boots", "boats", "goats", "notes", "notes", "roots", "sheets", "lights", "weights",
+    "its", "ants", "bats", "cats", "dots", "hats", "nets", "lots", "nuts", "pets", 
+    "boots", "boats", "goats", "notes", "roots", "sheets", "lights", "weights",
     "back hurts", "foot hurts", "tummy hurts", "thumb hurts", "martial arts", "darts", 
     "pants", "pints", "floats", "fruits", "plates", "paints", "carrots", "nuggets", "puppets", 
     "rabbits"]
