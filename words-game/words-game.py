@@ -4,7 +4,7 @@ import random
 from colorama import Fore, Style, init
 
 def play_game(players, selections):
-    turn = 0
+    turn = random.randint(0, 1)
     game_over = False
 
     while not game_over:
@@ -16,11 +16,12 @@ def play_game(players, selections):
             for i in range(wordcount):
                 word = random.choice(wordlist)
                 wordlist.remove(word)
-                if len(sel[0]) < wordcount:
-                    game_over = True
                 words.append(word)
 
-        print(f"{Fore.GREEN}{players[turn]}'s {Style.RESET_ALL}turn!")
+            if len(wordlist) < wordcount:
+                game_over = True
+
+        print(f"{Fore.GREEN}{players[turn]}:")
         for word in words:
             print(f"{Fore.YELLOW}{word}")
 
@@ -29,9 +30,9 @@ def play_game(players, selections):
 
     print(f"{Fore.RED}Game over!")
 
-
+ 
 @click.command()
-@click.option('--game', default='ch-words')
+@click.option('--game', prompt="Which game?")
 def main(game):
     init(autoreset=True)
 

@@ -5,16 +5,16 @@
     ],
 
     "games": {
-        "ts-words": {
+        "ts": {
             "ts-words": 2
         },
 
-        "sj-words": {
+        "sj": {
             "s-words": 1,
             "j-words": 1
         },
 
-        "ch-words": {
+        "ch": {
             "ch-words": 1,
             "ts-words": 1
         }
@@ -121,7 +121,20 @@
             "beach",
             "church",
             "wrench",
-            "ostrich"
+            "ostrich",
+            "hutch",
+            "patch",
+            "bunch",
+            "munch",
+            "crunch",
+            "launch",
+            "reach",
+            "teach",
+            "Dutch",
+            "touch",
+            "crouch",
+            "pouch",
+            "brunch"
         ]
     }
 }

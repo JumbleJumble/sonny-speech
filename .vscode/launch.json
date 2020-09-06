@@ -5,12 +5,40 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "S and J words",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceRoot}/words-game/words-game.py",
+            "args": [
+                "--game",
+                "sj"
+            ],
             "console": "integratedTerminal",
-            "cwd": "${fileDirname}"
+            "cwd": "${workspaceRoot}/words-game"
+        },
+        {
+            "name": "TS words",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/words-game/words-game.py",
+            "args": [
+                "--game",
+                "ts"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}/words-game"
+        },
+        {
+            "name": "CH words",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/words-game/words-game.py",
+            "args": [
+                "--game",
+                "ch"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}/words-game"
         }
     ]
 }
