@@ -20,16 +20,18 @@ def play_game(players, selections):
                     game_over = True
                 words.append(word)
 
-        print(f"{Fore.GREEN}{players[turn]}'s {Style.RESET_ALL} turn!")
+        print(f"{Fore.GREEN}{players[turn]}'s {Style.RESET_ALL}turn!")
         for word in words:
             print(f"{Fore.YELLOW}{word}")
 
         input()
         turn = (turn + 1) % len(players)
 
+    print(f"{Fore.RED}Game over!")
+
 
 @click.command()
-@click.option('--game', default='sj-words')
+@click.option('--game', default='ch-words')
 def main(game):
     init(autoreset=True)
 
