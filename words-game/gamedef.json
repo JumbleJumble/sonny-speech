@@ -1,0 +1,126 @@
+{
+    "players": [
+        "Richard",
+        "Sonny"
+    ],
+
+    "games": {
+        "ts-words": {
+            "ts-words": 2
+        },
+
+        "sj-words": {
+            "s-words": 1,
+            "j-words": 1
+        },
+
+        "ch-words": {
+            "ch-words": 2
+        }
+    },
+    
+    "word-lists": {
+        "ts-words": [
+            "butts",
+            "ants",
+            "bats",
+            "cats",
+            "dots",
+            "hats",
+            "nets",
+            "lots",
+            "nuts",
+            "pets",
+            "boots",
+            "boats",
+            "goats",
+            "notes",
+            "roots",
+            "sheets",
+            "lights",
+            "weights",
+            "back hurts",
+            "foot hurts",
+            "tummy hurts",
+            "butt hurts",
+            "martial arts",
+            "darts",
+            "pants",
+            "squats",
+            "floats",
+            "fruits",
+            "armpits",
+            "Muppets",
+            "carrots",
+            "nuggets",
+            "puppets",
+            "rabbits"
+        ],
+        "s-words": [
+            "sit",
+            "sand",
+            "sock",
+            "soap",
+            "sun",
+            "seal",
+            "sand",
+            "sink",
+            "soup",
+            "sing",
+            "suitcase",
+            "sick",
+            "saw",
+            "salt",
+            "same",
+            "soda",
+            "say",
+            "see",
+            "sew",
+            "sidewalk"
+        ],
+        "j-words": [
+            "jelly beans",
+            "jacket",
+            "jingle bells",
+            "jacks",
+            "jelly",
+            "juice",
+            "jam",
+            "jump",
+            "Jupiter",
+            "Jack 'o lantern",
+            "jet ski",
+            "jog",
+            "jump rope",
+            "jewellery",
+            "janitor",
+            "July",
+            "jeep",
+            "J",
+            "joker",
+            "jail"
+        ],
+        "ch-words": [
+            "rich",
+            "itch",
+            "pinch",
+            "lunch",
+            "sandwich",
+            "punch",
+            "peach",
+            "touch",
+            "switch",
+            "witch",
+            "match",
+            "catch",
+            "watch",
+            "bench",
+            "speech",
+            "couch",
+            "beach",
+            "church",
+            "wrench",
+            "ostrich"
+        ]
+    }
+}
