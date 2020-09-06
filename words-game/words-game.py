@@ -2,6 +2,7 @@ import json
 import click
 import random
 from colorama import Fore, Style, init
+from os import system
 
 def play_game(players, selections):
     turn = random.randint(0, 1)
@@ -35,6 +36,7 @@ def play_game(players, selections):
 @click.option('--game', prompt="Which game?")
 def main(game):
     init(autoreset=True)
+    system('cls')
 
     gamedef = {}
     with open('gamedef.json') as gamedef_file:
