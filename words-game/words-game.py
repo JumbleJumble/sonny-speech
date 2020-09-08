@@ -4,22 +4,27 @@ import random
 from colorama import Fore, Style, init
 from os import system
 
-def play_game(players, selections):
-    turn = random.randint(0, 1)
+
+class Pool:
+    def __init__(self, words, count):
+        super().__init__()
+        self.words = words
+        self.count = count
+
+
+def play_game(players, pools):
+    turn = random.randrange(len(players))
     game_over = False
 
     while not game_over:
         words = []
-        for sel in selections:
-            wordlist = sel[0]
-            wordcount = sel[1]
-
-            for i in range(wordcount):
-                word = random.choice(wordlist)
-                wordlist.remove(word)
+        for pool in pools:
+            for i in range(pool.count):
+                word = random.choice(pool.words)
+                pool.words.remove(word)
                 words.append(word)
 
-            if len(wordlist) < wordcount:
+            if len(pool.words) < pool.count:
                 game_over = True
 
         print(f"{Fore.GREEN}{players[turn]}:")
@@ -31,7 +36,7 @@ def play_game(players, selections):
 
     print(f"{Fore.RED}Game over!")
 
- 
+
 @click.command()
 @click.option('--game', prompt="Which game?")
 def main(game):
@@ -52,10 +57,10 @@ def main(game):
 
     selections = []
     for rule in rules.items():
-        selections.append((gamedef["word-lists"][rule[0]], rule[1]))
+        selections.append(Pool(gamedef["word-lists"][rule[0]], rule[1]))
 
     play_game(players, selections)
-    
+
 
 if __name__ == "__main__":
     main()
