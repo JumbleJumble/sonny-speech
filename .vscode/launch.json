@@ -39,6 +39,18 @@
             ],
             "console": "integratedTerminal",
             "cwd": "${workspaceRoot}/words-game"
+        },
+        {
+            "name": "practice",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/words-game/words-game.py",
+            "args": [
+                "--game",
+                "practice"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}/words-game"
         }
     ]
 }

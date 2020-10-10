@@ -6,20 +6,38 @@
 
     "games": {
         "ts": {
-            "ts-words": 2
+            "pool": {
+                "ts-words": 2
+            }
         },
 
         "sj": {
-            "s-words": 1,
-            "j-words": 1
-        },
-
-        "ch": {
-            "ch-words": 1,
-            "ts-words": 1
+            "pool": {
+                "s-words": 1,
+                "j-words": 1
         }
     },
-    
+
+        "ch": {
+            "pool": {
+                "ch-end-words": 1,
+                "ts-words": 1
+            }
+        },
+
+        "practice": {
+            "pool": {
+                "ts-words": 1,
+                "s-words": 1,
+                "j-words": 1,
+                "ch-end-words": 1,
+                "ch-start-words": 1,
+                "sh-words": 1
+            },
+            "max-words": 3
+        }
+    },
+
     "word-lists": {
         "ts-words": [
             "butts",
@@ -101,7 +119,7 @@
             "joker",
             "jail"
         ],
-        "ch-words": [
+        "ch-end-words": [
             "rich",
             "itch",
             "pinch",
@@ -135,6 +153,49 @@
             "crouch",
             "pouch",
             "brunch"
+        ],
+        "ch-start-words": [
+            "cheese",
+            "chest",
+            "chocolate",
+            "chimney",
+            "chimpanzee",
+            "chipmunk",
+            "chicken",
+            "chump",
+            "cherry",
+            "check",
+            "ciao",
+            "channel",
+            "chestnut",
+            "chill",
+            "charge",
+            "chunky",
+            "chew",
+            "choose"
+        ],
+        "sh-words": [
+            "shops",
+            "fish",
+            "shiny",
+            "shrimp",
+            "bash",
+            "crash",
+            "smash",
+            "mashed",
+            "posh",
+            "shoot",
+            "shing!",
+            "shy",
+            "share",
+            "shoulder",
+            "shrink",
+            "pirate ship",
+            "Porsche",
+            "polish",
+            "English",
+            "Spanish",
+            "Welsh"
         ]
     }
 }

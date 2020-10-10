@@ -1,7 +1,7 @@
 import json
 import click
 import random
-from colorama import Fore, Style, init
+from colorama import Fore, init
 from os import system
 
 
@@ -12,20 +12,22 @@ class Pool:
         self.count = count
 
 
-def play_game(players, pools):
+def play_game(players, pools, max_words):
     turn = random.randrange(len(players))
     game_over = False
 
     while not game_over:
+        random.shuffle(pools)
         words = []
         for pool in pools:
-            for i in range(pool.count):
-                word = random.choice(pool.words)
-                pool.words.remove(word)
-                words.append(word)
+            if len(words) < max_words:
+                for _ in range(pool.count):
+                    word = random.choice(pool.words)
+                    pool.words.remove(word)
+                    words.append(word)
 
-            if len(pool.words) < pool.count:
-                game_over = True
+                if len(pool.words) < pool.count:
+                    game_over = True
 
         print(f"{Fore.GREEN}{players[turn]}:")
         for word in words:
@@ -43,23 +45,29 @@ def main(game):
     init(autoreset=True)
     system('cls')
 
-    gamedef = {}
+    ruleset = {}
     with open('gamedef.json') as gamedef_file:
-        gamedef = json.load(gamedef_file)
+        ruleset = json.load(gamedef_file)
 
-    players = gamedef["players"]
+    players = ruleset["players"]
 
     try:
-        rules = gamedef["games"][game]
+        gamedef = ruleset["games"][game]
     except KeyError:
         print(f"Could not find game {game}")
         return
 
-    selections = []
-    for rule in rules.items():
-        selections.append(Pool(gamedef["word-lists"][rule[0]], rule[1]))
+    pools = []
+    try:
+        max_words = int(gamedef["max-words"])
+    except KeyError:
+        max_words = 999
 
-    play_game(players, selections)
+    pooldef = gamedef["pool"]
+    for pool in pooldef.items():
+        pools.append(Pool(ruleset["word-lists"][pool[0]], pool[1]))
+
+    play_game(players, pools, max_words)
 
 
 if __name__ == "__main__":
